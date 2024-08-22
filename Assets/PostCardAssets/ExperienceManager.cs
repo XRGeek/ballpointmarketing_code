@@ -8,6 +8,7 @@ public class ExperienceManager : MonoBehaviour
     public float typingSpeed;
     public string[] Messages;
     public AudioSource AudioClip;
+    public GameObject Confetti;
 
     private string tempMessage;
     private int FontIndex;
@@ -48,6 +49,7 @@ public class ExperienceManager : MonoBehaviour
 
     IEnumerator RevealText()
     {
+        yield return new WaitForSeconds(0.2f);
         AudioClip.loop = true;
         AudioClip.Play();
         
