@@ -283,7 +283,7 @@ MonoBehaviour:
   Texts:
   - {fileID: 8385587580573902006}
   - {fileID: 3243874987259791366}
-  typingSpeed: 0.1
+  typingSpeed: 0.07
   Messages:
   - "I\u2019m looking to purchase another home for cash, as- is! If you or someone
     you know is interested in selling, call me at the number below! "
@@ -293,6 +293,7 @@ MonoBehaviour:
     give me call today!"
   - Ready to upgrade to your next house? Give me a call and lets see how we can work
     together!
+  AudioClip: {fileID: 0}
 --- !u!1 &6952614983991486845
 GameObject:
   m_ObjectHideFlags: 0

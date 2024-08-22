@@ -7,9 +7,11 @@ public class ExperienceManager : MonoBehaviour
     public Text[] Texts;
     public float typingSpeed;
     public string[] Messages;
+    public AudioSource AudioClip;
 
     private string tempMessage;
     private int FontIndex;
+
 
     private void OnEnable()
     {
@@ -46,6 +48,9 @@ public class ExperienceManager : MonoBehaviour
 
     IEnumerator RevealText()
     {
+        AudioClip.loop = true;
+        AudioClip.Play();
+        
         Debug.Log("Starting RevealText Coroutine");
         foreach (char letter in tempMessage.ToCharArray())
         {
@@ -54,5 +59,6 @@ public class ExperienceManager : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
         Debug.Log("Completed RevealText Coroutine");
+        AudioClip.Stop();
     }
 }
